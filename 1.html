@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>დავალება 10</title>
+    <style>
+        .line{
+            width: 100%;
+            border-top: 4px dashed black;
+            text-align: center;
+            font-size: 20px;
+            color: red;
+        }
+        table{
+            border: 2px solid black;
+        }
+        td{
+            border: 2px solid black;
+            min-width: 100px;
+            min-height: 100px;
+            width: 100px;
+            height: 100px;
+        }
+        img{
+            max-height: 200px;
+            max-width: 200px;
+            object-fit: contain;
+        }
+        .form-container{
+            background-color: #f0f8ff;
+            border: solid skyblue;
+            padding: 7px;
+        }
+        .form-container label{
+            font-weight: bold;
+        }
+        .form-container input{
+            width: 80px;
+        }
+        .form-container button{
+            margin: 10px 0;
+            padding: 5px;
+            background-color: #c6e1f8;
+            border-color: skyblue;
+            border-radius: 7px;
+        }
+        .form-container textarea{
+            max-width: calc(100% - 5px);
+            width: calc(100% - 5px);
+            height: 300px;
+        }
+        .form-container select{
+            margin-top: 3px;
+        }
+    </style>
+    <script src="1.js"></script>
+</head>
+<body>
+    <!-- //18. -->
+    <div id="18"></div>
+    <script>imgTable()</script>
+    <!-- //19. -->
+    <script>exN(19)</script>
+    <div class="form">
+        <label for="row">სტრიქონები:</label>
+        <input type="number" min="0" id="row">
+        <br>
+        <label for="col">სვეტები:</label>
+        <input type="number" min="0" id="col">
+        <br>
+        <label for="img">ფოტოები:</label>
+        <input type="number" min="0" id="img">
+        <br>
+        <button onclick="checkTableImgs()">ცხრილის გენერირება</button>
+    </div>
+    <div id="19"></div>
+    <!-- //20. -->
+    <script src="2.js"></script>
+    <!-- //31. -->
+    <div class="form-container">
+        <label for="m">სიტყვებში მინიმალური რაოდენობის სიმბოლო:</label>
+        <br>
+        <input type="number" min="0" id="m">
+        <br>
+        <label for="n">სიტყვებში მაქსიმალური რაოდენობის სიმბოლო:</label>
+        <br>
+        <input type="number" min="1" id="n">
+        <br>
+        <label for="k">აბზაცში მინიმალური რაოდენობის სიტყვები:</label>
+        <br>
+        <input type="number" min="0" id="k">
+        <br>
+        <label for="l">აბზაცში მაქსიმალური რაოდენობის სიტყვები:</label>
+        <br>
+        <input type="number" min="1" id="l">
+        <br>
+        <label for="p">აბზაცების რაოდენობა:</label>
+        <br>
+        <input type="number" min="1" id="p">
+        <br>
+        <label for="lang">დამწერლობა:</label>
+        <br>
+        <select id="lang">
+            <option value="LAT">Latin</option>
+            <option value="GEO">ქართული</option>
+            <option value="CYR">Кириллица</option>
+        </select>
+        <br>
+        <button onclick="checkTextForm()">გენერირება</button>
+        <br>
+        <textarea id="31"></textarea>
+    </div>
+    <!-- //32. -->
+    <script>
+        exN(32)
+        document.write(countSub("დრაკონის ფრთები დრაკონისეული ძვირი დრაკონი ღირს დრაკონისთვის რომ მან იყიდოს დრაკონი","დრაკონ"))
+    </script>
+</body>
+</html>
